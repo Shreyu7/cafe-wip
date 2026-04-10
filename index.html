@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café WIP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0b;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+.nav-content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+.nav-links a {
+  color: #ddd;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background: white;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  padding-top: 100px;
+  background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  letter-spacing: 4px;
+}
+
+.hero p {
+  color: #ccc;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+/* SECTIONS */
+section {
+  padding: 90px 20px;
+  max-width: 1000px;
+  margin: auto;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* MENU */
+.menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.item {
+  padding: 18px;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.2s;
+}
+
+.item:hover {
+  border-color: white;
+  transform: translateY(-2px);
+}
+
+/* GALLERY */
+.gallery {
+  display: flex;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 33%;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* LOCATION */
+.location {
+  text-align: center;
+  color: #aaa;
+}
+
+/* INSTAGRAM BUTTON */
+.insta-btn {
+  margin-top: 25px;
+  padding: 12px 22px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+  border-radius: 6px;
+}
+
+/* FADE */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #666;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="nav-content">
+    <div class="logo">CAFÉ WIP</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#menu">Menu</a>
+      <a href="#featured">Featured</a>
+      <a href="#visit">Visit</a>
+    </div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>CAFÉ WIP</h1>
+    <p>Built slowly, brewed honestly.</p>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="fade" style="text-align:center;">
+  <h2>About Us</h2>
+  <p>
+    We’re not trying to be perfect — just honest.  
+    Café WIP is a small space built around good coffee, slow moments, and conversations that don’t feel rushed.  
+    Whether it’s your daily caffeine fix or a late-night hang, this place is meant to feel easy, real, and still in progress.
+  </p>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="fade">
+  <h2>Menu</h2>
+  <div class="menu">
+    <div class="item"><span>Biscoff Latte</span><span>₹</span></div>
+    <div class="item"><span>Cortado</span><span>₹</span></div>
+    <div class="item"><span>Biscoff Pancake</span><span>₹</span></div>
+    <div class="item"><span>Matcha Latte</span><span>₹</span></div>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section id="featured" class="fade">
+  <h2>Featured</h2>
+  <div class="gallery">
+    <img src="651362791_17856335208653087_6594767103203520456_n (1).jpg">
+    <img src="651362791_17856335208653087_6594767103203520456_n (2).jpg">
+    <img src="651362791_17856335208653087_6594767103203520456_n (3).jpg">
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="visit" class="location fade">
+  <h2>Visit</h2>
+  <p>
+    Block 2, Shop 6, Emerald Plaza <br>
+    Hiranandani Meadows, Thane (W)
+  </p>
+  <p>Open daily: 11:30 AM – 2:00 AM</p>
+
+  <button class="insta-btn" onclick="window.open('https://www.instagram.com/cafe.wip/')">
+    Insta
+  </button>
+</section>
+
+<footer>
+  <p>Work in progress.</p>
+</footer>
+
+</body>
+</html>
